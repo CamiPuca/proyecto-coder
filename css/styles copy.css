@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{   /* selector universal, se usa para reseteo */
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family: "Raleway",
-    sans-serif;
-    font-weight:600;
-   /*  font-style:italic; */
-}
-
 h1{
     color:rgb(201, 98, 98);
     font-family: "Playfair Display",
@@ -24,11 +12,6 @@ h1{
 h2{
     color:rgb(177, 55, 55);
     font-size:35px;
-    padding: 25px 10px;
-}
-
-p{
-    padding: 0px 10px;
 }
 
 header a img{
@@ -37,6 +20,19 @@ header a img{
 
 }
 
+
+
+*{   /* selector universal, se usa para reseteo */
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: "Raleway",
+    sans-serif;
+    font-weight:600;
+   /*  font-style:italic; */
+}
 
 ul{
     list-style: none; /* para sacar los puntos de la lista */
@@ -101,18 +97,6 @@ ul{
     align-items: center;
     height: 100px;
 }
-/*--------------*/
-.carousel-inner img{
-    height: 550px; 
-    object-fit: cover;
-}
-
-
-
-
-
-
-
 
 /*---------GRID MUSICA--------*/
 .album-grid {
@@ -144,7 +128,6 @@ ul{
   height: auto;
   display: block;
   border-radius: 10%;
-  padding: 10px 20px; 
 }
 
 /*---------FOOTER--------*/
