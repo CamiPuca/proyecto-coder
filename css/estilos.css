@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* { /* selector universal, se usa para reseteo */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+header nav.mobile {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+p {
+  padding: 10px 20px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: rgb(237, 230, 230);
+  margin-bottom: 5%;
+}
+header div a img {
+  width: 25%;
+}
+header nav {
+  width: 70%;
+}
+header nav ul .tienda-boton {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: space-evenly;
+  flex-wrap: nowrap;
+}
+header nav ul .tienda-boton .fa-solid {
+  margin: 10px;
+}
+
+li > a, .fa-solid { /* todos los enlaces que se encuentren dentro de una etiqueta de lista tendran ciertas caracteristicas */
+  color: rgb(179, 82, 82);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+main h1 {
+  color: rgb(201, 98, 98);
+  font-family: "Playfair Display", sans-serif;
+  font-size: 75px;
+  text-align: left;
+  padding-bottom: 20px;
+  margin: 20px;
+}
+main h1.h1-inicio {
+  text-align: center;
+}
+main .storie-text {
+  font-weight: 500;
+  color: rgb(112, 104, 104);
+  font-size: 22px;
+  text-align: left;
+}
+main .storie-text .slide div img, main .storie-text .carousel-inner div img {
+  display: inline-block;
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+main .storie-text .subtitulo-inicio {
+  color: rgb(177, 55, 55);
+  font-size: 35px;
+  padding: 25px 20px;
+}
+main .album-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+main .album-grid .album1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+main .album-grid .album2 {
+  grid-column: 2;
+  grid-row: 1/span 2;
+  object-position: center top;
+}
+main .album-grid .album3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+main .album-grid div img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10%;
+  padding: 10px 20px;
+}
+main .album-grid div p {
+  font-weight: 500;
+  color: rgb(74, 70, 70);
+  font-size: 22px;
+  margin-top: 8px;
+  text-align: center;
+}
+main .media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1 fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  font-weight: 500;
+  color: rgb(74, 70, 70);
+  font-size: 22px;
+  margin-top: 8px;
+  text-align: center;
+}
+main .media-grid .media1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+main .media-grid .media2 {
+  grid-column: 2;
+  grid-row: 1/span 2;
+  object-position: center top;
+}
+main .media-grid .media3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+main .media-grid div img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 10px 20px;
+}
+main .grid-tienda {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  font-weight: 500;
+  color: rgb(139, 63, 76);
+  font-size: 20px;
+}
+main .grid-tienda .prod1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+main .grid-tienda .prod2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+main .grid-tienda div img {
+  width: 100%;
+  height: 510px;
+  display: block;
+  padding: 30px 20px;
+  object-fit: cover;
+}
+main .grid-tienda div #precio {
+  font-weight: 800;
+  color: rgb(57, 26, 31);
+  font-size: 23px;
+}
+main .grid-tienda div label {
+  padding-left: 20px;
+}
+main .gira-promo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 20px 20px;
+  margin: 20px;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  margin-top: 8px;
+  text-align: center;
+}
+main .gira-promo .gira-promo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main .gira-promo img {
+  width: 40%;
+  height: auto;
+  display: inline-block;
+}
+main section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  font-weight: 500;
+  color: rgb(74, 70, 70);
+  font-size: 22px;
+  margin-top: 8px;
+  text-align: center;
+}
+main section table .titulo-seccion {
+  text-align: left;
+  padding: 0 40px;
+  text-decoration: underline;
+}
+
+footer .tour-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  width: 90vw;
+  height: 65vh;
+  margin: 31px auto;
+  align-content: center;
+  font-weight: 500;
+  color: rgb(74, 70, 70);
+  font-size: 22px;
+  margin-top: 8px;
+  text-align: center;
+}
+footer .tour-form .tour-subtitulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  text-align: left;
+  padding: 30px;
+}
+footer .tour-form .tour-subtitulo .tour-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  padding: 20px 20px;
+}
+footer .tour-form .tour-suscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  margin-top: 100px;
+  padding: 60px;
+}
+footer div .container-redes {
+  margin: 5px auto;
+  padding: 10px;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+footer div .fa-copyright {
+  margin: 10px;
+}
+
+/* RESPONSIVE (se adapta a dispositivos mobiles con enfoque desktop first) */
+@media screen and (max-width: 768px) {
+  header nav.desktop {
+    display: none;
+  }
+  header nav.mobile {
+    display: block;
+    text-align: center;
+    margin: 10px;
+  }
+  main h1 {
+    font-size: 50px;
+  }
+  main .storie-text div .carousel-inner img {
+    width: 30vw;
+    height: 31vh;
+  }
+  main .media-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+  }
+  main .grid-tienda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  main .gira-promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  main .gira-promo img {
+    width: 120%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  main section table {
+    font-size: 15px;
+  }
+  footer .tour-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  footer .tour-form .tour-suscribe {
+    align-items: center;
+    margin-top: 0;
+    padding: 0;
+  }
+  footer div .container-redes {
+    margin: 5px auto;
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */
