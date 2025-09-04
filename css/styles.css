@@ -259,15 +259,6 @@ li>a, .fa-solid { /* todos los enlaces que se encuentren dentro de una etiqueta 
 
 /*footer updates*/
 
-
-/*
-.tour-form{
-    display:flex;
-    justify-content: space-between; 
-    gap: 40px;
-    align-items: flex-start; 
-}*/
-
 .tour-subtitulo{
     display:flex;
     flex-direction: column; 
