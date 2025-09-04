@@ -12,7 +12,7 @@
 <body>
     <header>
         <div><a href="../index.html"><img src="../assets/img/Paramore-Logo.png" alt="paramore logo"></a></div>
-        <nav>
+        <nav class="desktop">
             <ul>
                 <li><a href="../index.html">INICIO</a></li>
                 <li><a href="./musica.html">MÚSICA</a></li>
@@ -20,15 +20,18 @@
                 <li><a href="./tienda.html">TIENDA</a></li>
                 <li><a href="./gira.html">GIRA</a></li>
             </ul>
-        </nav>       
+        </nav>
+        <nav class="mobile">
+            <i class="fa-solid fa-bars"></i>
+        </nav>         
     </header>
     <main>
-        <section>
-            <h1>Gira</h1>
-            <img src="../assets/img/gira-promo.png" style="width: 480px; height: 220;" alt="foto integrantes de la banda">
-            <h2>LATINOAMERICA 2025</h2>
+        <h1>Gira</h1>
+        <section class="gira-promo">
+            <img src="../assets/img/gira-promo.png"  alt="foto integrantes de la banda">
+            <div class="gira-promo-text"><h2>LATINOAMERICA 2025</h2>
             <p class="tour-text">INVITADO ESPECIAL ELKE</p>
-            <nav><a href="#latam" class="boton">COMPRAR ENTRADAS</a></nav>
+            <nav><a href="#latam" class="boton">COMPRAR ENTRADAS</a></nav></div>
         </section>
 
         <section class="tour-text">
@@ -75,30 +78,33 @@
         </section>
 
         <footer>
-            <section class="tour-text">
-                <h3>UPDATES</h3>
-                <p>¡Suscríbete a la lista de correo de Paramore para recibir actualizaciones!</p>
-                <form action="#" method="post">
+            <section class="tour-form">
+                <div class="tour-subtitulo"><h3>UPDATES</h3>
+                <h4>¡Suscríbete a la lista de correo de Paramore para recibir actualizaciones!</h4>
+                <form class="tour-input" action="#" method="post">
+                    
                     <label for="nombre">Nombre:</label>
                     <input type="text" name="nombre" id="nombre">
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email">
                     <label for="pais">País:</label>
-                    <select name="" id="">
-                        <option value="">Brasil</option>
-                        <option value="">Argentina</option>
-                        <option value="">Uruguay</option>
-                        <option value="">Estados Unidos</option>
-                        <option value="">Chile</option>
-                    <label><input type="checkbox" name="acepto" id="acepto" required>Acepto recibir correos electrónicos entendiendo que puedo cancelar fácilmente estas comunicaciones en cualquier momento después de registrarme.</label>
-            
-                    <input type="submit" value="SUSCRIBIRSE">
+                    <select name="pais" id="pais">
+                        <option value="br">Brasil</option>
+                        <option value="ar">Argentina</option>
+                        <option value="uy">Uruguay</option>
+                        <option value="us">Estados Unidos</option>
+                        <option value="cl">Chile</option>
+                    </select>
+                    </form>
+                </div>
+                    <div class="tour-suscribe"><form><label class="checkbox-label"><input type="checkbox" name="acepto" id="acepto" required>Acepto recibir correos electrónicos entendiendo que puedo cancelar fácilmente estas comunicaciones en cualquier momento después de registrarme.</label>
+                    <input type="submit" value="SUSCRIBIRSE" class="boton-submit">
+                    </div>
                 </form>
             </section>
            
 
             <div>
-                <nav>
                 <ul class="container-redes">
                     <li><a href="https://www.instagram.com/paramore/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="https://www.tiktok.com/@paramoreofficial" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
@@ -108,7 +114,6 @@
                     <li><a href="https://on.soundcloud.com/vL7BoOgPNvK8GDjANR" target="_blank"><i class="fa-brands fa-soundcloud"></i></a></li>
                 </ul>
                 <i class="fa-solid fa-copyright"></i>
-            </nav>
             </div>     
 
         </footer>

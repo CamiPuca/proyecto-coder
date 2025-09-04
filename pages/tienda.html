@@ -14,25 +14,35 @@
     <header>
         <div>
             <a href="../index.html"><img src="../assets/img/Paramore-Logo.png" alt="paramore logo"></a>
-            <i class="fa-solid fa-dollar-sign"></i>
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
         </div>
            
-        <nav>
+        <nav class="desktop">
             <ul>
                 <li><a href="../index.html">INICIO</a></li>
                 <li><a href="./musica.html">MÚSICA</a></li>
                 <li><a href="./multimedia.html">MULTIMEDIA</a></li>
                 <li><a href="./tienda.html">TIENDA</a></li>
                 <li><a href="./gira.html">GIRA</a></li>
+               <div class="tienda-boton">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+               </div>
             </ul>
-        </nav>       
+        </nav> 
+        <nav class="mobile">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-bars"></i>
+
+        </nav>                
     </header>
     <main>
         <h1>Tienda</h1>
-        <div class="producto" style="text-align: left;">
-            <img src="../assets/img/cd-awkif.png" style="width: 500px; height: 250;" alt="tapa cd">
+        <section class="grid-tienda">
+        <div class="prod1">
+            <img src="../assets/img/cd-awkif.png"  alt="tapa cd">
             <p>CD - All We Know Is Falling</p>
             <p id="precio">$12000</p>
             <label for="cant">CANTIDAD:</label>
@@ -42,8 +52,8 @@
                         <option value="">3</option>
                     </select>
         </div>            
-        <div class="producto" style="text-align: left;">            
-            <img src="../assets/img/buzo.png" style="width: 480px; height: 220;" alt="buzo con corazon">
+        <div class="prod2">            
+            <img src="../assets/img/buzo.png" alt="buzo con corazon">
             <p>Buzo - STILL INTO YOU</p>
             <p id="precio">$23000</p>
              <label for="talle">TALLE:</label>
@@ -53,10 +63,10 @@
                         <option value="">L/XL</option>
                         </select> 
         </div>
+        </section>
     </main>
     <footer> 
         <div>
-            <nav>
                 <ul class="container-redes">
                     <li><a href="https://www.instagram.com/paramore/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href="https://www.tiktok.com/@paramoreofficial" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
@@ -66,7 +76,6 @@
                     <li><a href="https://on.soundcloud.com/vL7BoOgPNvK8GDjANR" target="_blank"><i class="fa-brands fa-soundcloud"></i></a></li>
                 </ul>
                 <i class="fa-solid fa-copyright"></i>
-            </nav>
         </div>      
     </footer>
     
