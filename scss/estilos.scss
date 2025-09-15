@@ -131,7 +131,7 @@ main{
                     border-radius: 10%;
                     padding: 10px 20px; 
                 }
-                p{
+                h2,h3,h4{
                     font-weight: 500;
                     color:rgb(74, 70, 70);
                     font-size:22px;
@@ -142,7 +142,7 @@ main{
     }
     .media-grid{
             display: grid;
-            grid-template-columns: 1fr 1fr 1 fr;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             gap: 60px;
             align-items: center;
@@ -215,6 +215,7 @@ main{
             }
     }
     .gira-promo{
+            background-color:#f2f2f2;
             @include flexbox(row, space-around, center, nowrap);
             padding: 20px 20px;
             margin: 20px;
@@ -233,6 +234,12 @@ main{
                 height: auto;
                 display: inline-block;
             }
+            nav{
+                a{
+                    color:rgb(201, 98, 98) ;
+                    text-decoration: none;
+                }
+            }
     }
     section{
             table{
@@ -245,15 +252,25 @@ main{
                 font-size:22px;
                 margin-top: 8px;
                 text-align:center;
-                .titulo-seccion{
+                tr{
+                    .titulo-seccion{
                         text-align:left;
-                        padding: 0 40px;
+                        padding: 10px 40px;
                         text-decoration: underline;
+                    }
+                    
+                    td{
+                        a{
+                            color: rgb(26, 24, 24);
+                            &:visited{
+                                color:rgb(201, 98, 98);
+                            }
+                        }
+                    }
+
                 }
             }
-
     }
- 
 }
 
 footer{
@@ -303,7 +320,7 @@ footer{
     }
 }
 
-/* RESPONSIVE (se adapta a dispositivos mobiles con enfoque desktop first) */
+/* RESPONSIVE (se adapta a dispositivos moviles con enfoque desktop first) */
 @media screen and (max-width: 768px) {
 
     header nav.desktop{
@@ -330,6 +347,10 @@ footer{
                 }
             }
         }
+
+        .album-grid{
+            gap: 10px;
+        }
         .media-grid{
             @include flexbox(column, center, stretch, nowrap);
         }
@@ -340,17 +361,22 @@ footer{
         .gira-promo{
             @include flexbox(column, center, center, nowrap);
             img{
-                width: 120%;
-                height: auto;
+                display: block;
+                width: 100%;
                 padding-bottom:20px;
+    
             }
+
         }
         section{
             table{
                 font-size: 15px;
+                td {
+                    padding: 10px 5px;
+                }
             }
-        }
 
+        }
     }
 
     footer{

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-* { /* selector universal, se usa para reseteo */
+* { /* selector universal, se usa para reseteo ----*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -115,7 +115,7 @@ main .album-grid div img {
   border-radius: 10%;
   padding: 10px 20px;
 }
-main .album-grid div p {
+main .album-grid div h2, main .album-grid div h3, main .album-grid div h4 {
   font-weight: 500;
   color: rgb(74, 70, 70);
   font-size: 22px;
@@ -124,7 +124,7 @@ main .album-grid div p {
 }
 main .media-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1 fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 60px;
   align-items: center;
@@ -141,7 +141,7 @@ main .media-grid .media1 {
 main .media-grid .media2 {
   grid-column: 2;
   grid-row: 1/span 2;
-  object-position: center top;
+  object-position: center;
 }
 main .media-grid .media3 {
   grid-column: 3;
@@ -186,6 +186,7 @@ main .grid-tienda div label {
   padding-left: 20px;
 }
 main .gira-promo {
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -211,6 +212,10 @@ main .gira-promo img {
   height: auto;
   display: inline-block;
 }
+main .gira-promo nav a {
+  color: rgb(201, 98, 98);
+  text-decoration: none;
+}
 main section table {
   width: 100%;
   border-collapse: collapse;
@@ -221,10 +226,16 @@ main section table {
   margin-top: 8px;
   text-align: center;
 }
-main section table .titulo-seccion {
+main section table tr .titulo-seccion {
   text-align: left;
-  padding: 0 40px;
+  padding: 10px 40px;
   text-decoration: underline;
+}
+main section table tr td a {
+  color: rgb(26, 24, 24);
+}
+main section table tr td a:visited {
+  color: rgb(201, 98, 98);
 }
 
 footer .tour-form {
@@ -283,7 +294,7 @@ footer div .fa-copyright {
   margin: 10px;
 }
 
-/* RESPONSIVE (se adapta a dispositivos mobiles con enfoque desktop first) */
+/* RESPONSIVE (se adapta a dispositivos moviles con enfoque desktop first) */
 @media screen and (max-width: 768px) {
   header nav.desktop {
     display: none;
@@ -299,6 +310,9 @@ footer div .fa-copyright {
   main .storie-text div .carousel-inner img {
     width: 30vw;
     height: 31vh;
+  }
+  main .album-grid {
+    gap: 10px;
   }
   main .media-grid {
     display: flex;
@@ -322,12 +336,15 @@ footer div .fa-copyright {
     flex-wrap: nowrap;
   }
   main .gira-promo img {
-    width: 120%;
-    height: auto;
+    display: block;
+    width: 100%;
     padding-bottom: 20px;
   }
   main section table {
     font-size: 15px;
+  }
+  main section table td {
+    padding: 10px 5px;
   }
   footer .tour-form {
     display: flex;
