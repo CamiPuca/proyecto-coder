@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIRA</title>
+    
     <script src="https://kit.fontawesome.com/ad3336bae9.js" crossorigin="anonymous"></script>
-            <!--LINK DE BOOTSTRAP -->
+    <!--LINK DE BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+
+    <!-----LINK AOS------>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- LINK CSS <link rel="stylesheet" href="./css/styles.css">-->
      
@@ -15,27 +19,36 @@
 </head>
 <body>
     <header>
-        <div><a href="../index.html"><img src="../assets/img/Paramore-Logo.png" alt="paramore logo"></a></div>
-        <nav class="desktop">
-            <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="./musica.html">MÚSICA</a></li>
-                <li><a href="./multimedia.html">MULTIMEDIA</a></li>
-                <li><a href="./tienda.html">TIENDA</a></li>
-                <li><a href="./gira.html">GIRA</a></li>
-            </ul>
-        </nav>
-        <nav class="mobile">
-            <i class="fa-solid fa-bars"></i>
-        </nav>         
+        <nav class="navbar navbar-expand-lg navbar-light bg-custom shadow-sm w-100">
+            <div class="container-fluid">
+                <a aria-label="Ir al inicio" class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="../assets/img/Paramore-Logo.png" alt="Logo banda paramore" height="48">
+                </a>
+
+                <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuHeader" aria-controls="menuHeader" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="navbar-collapse collapse" id="menuHeader" >
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./musica.html">MÚSICA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./multimedia.html">MULTIMEDIA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./tienda.html">TIENDA</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./gira.html">GIRA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
     </header>
+    
     <main>
         <h1>Gira</h1>
-        <section class="gira-promo">
+        <section class="gira-promo" data-aos="fade-up" data-aos-duration="3000">
             <img src="../assets/img/gira-promo.png"  alt="foto integrantes de la banda">
             <div class="gira-promo-text"><h2>LATINOAMERICA 2025</h2>
             <p>INVITADO ESPECIAL ELKE</p>
-            <nav><a href="#boletos" class="boton">COMPRAR ENTRADAS</a></nav></div>
+            <nav><a class="btn btn-primary" href="#boletos" role="button">COMPRAR ENTRADAS</a></nav></div>
         </section>
 
      <section class="tour-text">
@@ -51,12 +64,12 @@
                 <tr>
                     <td>22-06-2024</td>
                     <td>UK, Londres - Estadio Wembley </td>
-                    <td><a href="https://www.wembleystadium.com/Tickets" target="_blank">Ver detalles del evento</a></td>
+                    <td><a class="btn btn-primary" href="https://www.wembleystadium.com/Tickets" role="button">VER TICKETS</a></td>
                 </tr>
                 <tr>
                     <td>14-07-2024</td>
                     <td>Italia, Milan - Estadio San Siro</td>
-                    <td><a href="https://sansirostadium.com/" target="_blank">Ver detalles del evento</a></td>
+                    <td><a class="btn btn-primary" href="https://sansirostadium.com/" role="button">VER TICKETS</a></td>
                 </tr>
                 <tr>
                     <td colspan="3" class="titulo-seccion" id="boletos">LATINOAMERICA 2025</td>
@@ -64,12 +77,11 @@
                 <tr>
                     <td>10-03-2025</td>
                     <td>Argentina, Buenos Aires - Movistar Arena</td>
-                    <td><a href="https://www.movistararena.com.ar/" target="_blank">Ver detalles del evento</a></td>
-                </tr>
+                    <td><a class="btn btn-primary" href="https://www.movistararena.com.ar/" role="button">VER TICKETS</a></td>
                 <tr>
                     <td>11-03-2025</td>
                     <td>Chile, Santiago - Movistar Arena</td>
-                    <td><a href="https://www.movistararena.cl/" target="_blank">Ver detalles del evento</a></td>
+                     <td><a class="btn btn-primary" href="https://www.movistararena.cl" role="button">VER TICKETS</a></td>
                 </tr>
 
             </table>
@@ -77,7 +89,7 @@
 
 
         <footer>
-            <section class="tour-form">
+           <section class="tour-form" data-aos="fade-up-right" data-aos-duration="3000">
                 <div class="tour-subtitulo"><h3>UPDATES</h3>
                 <h4>¡Suscríbete a la lista de correo de Paramore para recibir actualizaciones!</h4>
                 <form class="tour-input" action="#" method="post">
@@ -97,7 +109,7 @@
                     </form>
                 </div>
                     <div class="tour-suscribe"><form><label class="checkbox-label"><input type="checkbox" name="acepto" id="acepto" required>Acepto recibir correos electrónicos entendiendo que puedo cancelar fácilmente estas comunicaciones en cualquier momento después de registrarme.</label>
-                    <input type="submit" value="SUSCRIBIRSE" class="boton-submit">
+                    <input class="btn btn-primary boton-submit" type="submit" value="SUSCRIBIRSE">
                     </div>
                 </form>
             </section>
@@ -118,6 +130,12 @@
         </footer>
             
     </main>
+    <!--script bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!--script aos e inicializacion-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>   
 </body>
 </html>

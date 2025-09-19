@@ -16,24 +16,27 @@
 
 <body>
     <header>
-        <div>
-          <a href="#">
-            <img src="./assets/img/Paramore-Logo.png" alt="paramore logo">
-          </a>
-        </div>
-        
-        <nav class="desktop">
-            <ul>
-                <li><a href="#">INICIO</a></li>
-                <li><a href="./pages/musica.html">MÚSICA</a></li>
-                <li><a href="./pages/multimedia.html">MULTIMEDIA</a></li>
-                <li><a href="./pages/tienda.html">TIENDA</a></li>
-                <li><a href="./pages/gira.html">GIRA</a></li>
-            </ul>
-        </nav> 
-        <nav class="mobile">
-            <i class="fa-solid fa-bars"></i>
-        </nav>   
+        <nav class="navbar navbar-expand-lg navbar-light bg-custom shadow-sm w-100">
+          <div class="container-fluid">
+            <a aria-label="Ir al inicio" class="navbar-brand d-flex align-items-center" href="#">
+              <img src="./assets/img/Paramore-Logo.png" alt="Logo banda paramore" height="48">
+            </a>
+       
+            <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuHeader" aria-controls="menuHeader" aria-expanded="false" aria-label="Abrir menú de navegación">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="navbar-collapse collapse" id="menuHeader" >
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">INICIO</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/musica.html">MÚSICA</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/multimedia.html">MULTIMEDIA</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/tienda.html">TIENDA</a></li>
+                <li class="nav-item"><a class="nav-link" href="./pages/gira.html">GIRA</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
     </header>
 
     <main>

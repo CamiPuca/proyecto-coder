@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+main .media-grid div h2, main .media-grid div h3, main .media-grid div h4, main .media-grid div h5, main .album-grid div h2, main .album-grid div h3, main .album-grid div h4 {
+  font-weight: 500;
+  color: rgb(74, 70, 70);
+  font-size: 22px;
+  margin-top: 8px;
+  text-align: center;
+}
+
 * { /* selector universal, se usa para reseteo ----*/
   margin: 0;
   padding: 0;
@@ -8,6 +16,7 @@
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
 header nav.mobile {
@@ -16,46 +25,23 @@ header nav.mobile {
 
 ul {
   list-style: none;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: nowrap;
 }
 
 p {
-  padding: 10px 20px;
+  padding: 0 20px;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: nowrap;
+header .bg-custom {
   background-color: rgb(237, 230, 230);
-  margin-bottom: 5%;
 }
-header div a img {
-  width: 25%;
-}
-header nav {
-  width: 70%;
-}
-header nav ul .tienda-boton {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: space-evenly;
-  flex-wrap: nowrap;
-}
-header nav ul .tienda-boton .fa-solid {
-  margin: 10px;
+header .bg-custom div li > a {
+  color: rgb(201, 98, 98);
+  text-decoration: none;
+  font-size: 20px;
 }
 
-li > a, .fa-solid { /* todos los enlaces que se encuentren dentro de una etiqueta de lista tendran ciertas caracteristicas */
-  color: rgb(179, 82, 82);
+.fa-solid {
+  color: rgb(201, 98, 98);
   text-decoration: none;
   font-size: 20px;
 }
@@ -84,7 +70,7 @@ main .storie-text .slide div img, main .storie-text .carousel-inner div img {
   object-fit: cover;
 }
 main .storie-text .subtitulo-inicio {
-  color: rgb(177, 55, 55);
+  color: rgb(201, 98, 98);
   font-size: 35px;
   padding: 25px 20px;
 }
@@ -115,24 +101,12 @@ main .album-grid div img {
   border-radius: 10%;
   padding: 10px 20px;
 }
-main .album-grid div h2, main .album-grid div h3, main .album-grid div h4 {
-  font-weight: 500;
-  color: rgb(74, 70, 70);
-  font-size: 22px;
-  margin-top: 8px;
-  text-align: center;
-}
 main .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 60px;
   align-items: center;
-  font-weight: 500;
-  color: rgb(74, 70, 70);
-  font-size: 22px;
-  margin-top: 8px;
-  text-align: center;
 }
 main .media-grid .media1 {
   grid-column: 1;
@@ -147,11 +121,24 @@ main .media-grid .media3 {
   grid-column: 3;
   grid-row: 1;
 }
-main .media-grid div img {
+main .media-grid .media4 {
+  grid-column: 3;
+  grid-row: 2;
+}
+main .media-grid div img, main .media-grid div iframe {
   width: 100%;
   height: auto;
   display: block;
   padding: 10px 20px;
+}
+main .media-grid div img.rotate, main .media-grid div iframe.rotate {
+  transition: transform 2s ease-in 4ms;
+}
+main .media-grid div img.rotate:hover, main .media-grid div iframe.rotate:hover {
+  transform: rotate(-5deg);
+}
+main .media-grid div .fa-play {
+  padding: 0px 200px;
 }
 main .grid-tienda {
   display: grid;
@@ -159,7 +146,7 @@ main .grid-tienda {
   grid-template-rows: 1fr;
   align-items: center;
   font-weight: 500;
-  color: rgb(139, 63, 76);
+  color: rgb(201, 98, 98);
   font-size: 20px;
 }
 main .grid-tienda .prod1 {
@@ -174,16 +161,26 @@ main .grid-tienda div img {
   width: 100%;
   height: 510px;
   display: block;
-  padding: 30px 20px;
+  padding: 10px 20px;
   object-fit: cover;
 }
 main .grid-tienda div #precio {
   font-weight: 800;
   color: rgb(57, 26, 31);
-  font-size: 23px;
+  font-size: 18px;
 }
 main .grid-tienda div label {
   padding-left: 20px;
+}
+main .grid-tienda div .btn {
+  background-color: #c62828;
+  border-color: #c62828;
+  color: white;
+  padding: 8px 10px;
+}
+main .grid-tienda div .btn:hover {
+  background-color: rgb(201, 98, 98);
+  border: #c62828;
 }
 main .gira-promo {
   background-color: #f2f2f2;
@@ -211,10 +208,18 @@ main .gira-promo img {
   width: 40%;
   height: auto;
   display: inline-block;
+  border-radius: 10%;
 }
 main .gira-promo nav a {
   color: rgb(201, 98, 98);
   text-decoration: none;
+  background-color: whitesmoke;
+  border-color: rgb(201, 98, 98);
+}
+main .gira-promo nav a:hover {
+  background-color: rgb(201, 98, 98);
+  border-color: rgb(201, 98, 98);
+  color: white;
 }
 main section table {
   width: 100%;
@@ -231,11 +236,22 @@ main section table tr .titulo-seccion {
   padding: 10px 40px;
   text-decoration: underline;
 }
-main section table tr td a {
+main section table tr td {
+  padding: 8px;
+}
+main section table tr td a.btn {
+  background-color: rgb(201, 98, 98);
+  border: 2px solid rgb(201, 98, 98);
   color: rgb(26, 24, 24);
 }
-main section table tr td a:visited {
+main section table tr td a.btn:hover {
+  background-color: rgb(201, 98, 98);
+  border-color: rgb(201, 98, 98);
+  color: whitesmoke;
+}
+main section table tr td a.btn:visited {
   color: rgb(201, 98, 98);
+  background-color: whitesmoke;
 }
 
 footer .tour-form {
@@ -280,6 +296,15 @@ footer .tour-form .tour-suscribe {
   margin-top: 100px;
   padding: 60px;
 }
+footer .tour-form .tour-suscribe .boton-submit {
+  background-color: #c62828;
+  border-color: #c62828;
+}
+footer .tour-form .tour-suscribe .boton-submit:hover {
+  color: white;
+  background-color: rgb(201, 98, 98);
+  border: solid #c62828;
+}
 footer div .container-redes {
   margin: 5px auto;
   padding: 10px;
@@ -290,19 +315,20 @@ footer div .container-redes {
   align-items: center;
   flex-wrap: nowrap;
 }
+footer div .container-redes li a .fa-brands:hover {
+  filter: drop-shadow(0 4px 10px rgba(188, 15, 107, 0.9));
+}
 footer div .fa-copyright {
   margin: 10px;
 }
 
-/* RESPONSIVE (se adapta a dispositivos moviles con enfoque desktop first) */
+/* --------RESPONSIVE (se adapta a dispositivos moviles con enfoque desktop first) */
 @media screen and (max-width: 768px) {
   header nav.desktop {
     display: none;
   }
   header nav.mobile {
     display: block;
-    text-align: center;
-    margin: 10px;
   }
   main h1 {
     font-size: 50px;
@@ -312,7 +338,7 @@ footer div .fa-copyright {
     height: 31vh;
   }
   main .album-grid {
-    gap: 10px;
+    gap: 5px;
   }
   main .media-grid {
     display: flex;
@@ -327,6 +353,9 @@ footer div .fa-copyright {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
+  }
+  main .grid-tienda div img {
+    height: auto;
   }
   main .gira-promo {
     display: flex;
@@ -345,6 +374,10 @@ footer div .fa-copyright {
   }
   main section table td {
     padding: 10px 5px;
+  }
+  main section table td a.btn {
+    padding: 0 6px;
+    font-size: 12px;
   }
   footer .tour-form {
     display: flex;

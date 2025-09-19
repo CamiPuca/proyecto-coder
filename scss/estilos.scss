@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+$font-ppal: "Playfair Display", sans-serif;
+$color-text: rgb(201, 98, 98);
+
+
+
 @mixin flexbox($direction, $j-content, $align-item, $wrap) {
     display:flex;
     flex-direction: $direction;
@@ -7,6 +12,16 @@
     align-items: $align-item;
     flex-wrap: $wrap;
 }
+
+%text-style{
+        font-weight: 500;
+        color:rgb(74, 70, 70);
+        font-size:22px;
+        margin-top: 8px;
+        text-align:center;
+}
+
+
 
 *{   /* selector universal, se usa para reseteo ----*/
     margin:0;
@@ -18,6 +33,7 @@ body{
     font-family: "Raleway",
     sans-serif;
     font-weight:600;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
 header nav.mobile{
@@ -28,43 +44,30 @@ header nav.mobile{
 
 ul{
     list-style: none;
-    height: 100px;
-    @include flexbox(row, space-around, center, nowrap);
 }
 
 p{
-    padding: 10px 20px;
+    padding:0 20px;
 }
 
 header{
-        @include flexbox(row, space-around, center, nowrap);
-        background-color: rgb(237, 230, 230);
-        margin-bottom: 5%;
-    
-    div{
-        a{
-            img{
-                width: 25%;
+      .bg-custom{
+        background-color:  rgb(237, 230, 230);
+        div{    
+            li>a{ // todos los enlaces que se encuentren dentro de una etiqueta de lista tendran ciertas caracteristicas
+                color:$color-text;
+                text-decoration:none;
+                font-size: 20px;
+            }
 
-            }
         }
-    }
-    nav{
-        width: 70%;
-        ul{
-            .tienda-boton{
-                    @include flexbox(row, space-around, space-evenly, nowrap);
-                    .fa-solid{
-                        margin: 10px;
-                    }
-            }
-        }
-    }
+       }
 }
 
 
-li>a, .fa-solid { /* todos los enlaces que se encuentren dentro de una etiqueta de lista tendran ciertas caracteristicas */
-    color:rgb(179, 82, 82);
+.fa-solid { 
+
+    color:$color-text;
     text-decoration:none;
     font-size: 20px;
 
@@ -72,8 +75,8 @@ li>a, .fa-solid { /* todos los enlaces que se encuentren dentro de una etiqueta 
 
 main{
     h1 {
-        color:rgb(201, 98, 98);
-        font-family: "Playfair Display", sans-serif;
+        color: $color-text;
+        font-family: $font-ppal;
         font-size:75px;
         text-align: left;
         padding-bottom: 20px;
@@ -99,7 +102,7 @@ main{
                 }
             }
             .subtitulo-inicio{
-                 color:rgb(177, 55, 55);
+                 color: $color-text;
                 font-size:35px;
                 padding: 25px 20px;
             }    
@@ -132,13 +135,10 @@ main{
                     padding: 10px 20px; 
                 }
                 h2,h3,h4{
-                    font-weight: 500;
-                    color:rgb(74, 70, 70);
-                    font-size:22px;
-                    margin-top: 8px;
-                    text-align:center;
+                    @extend %text-style;
                 }
             }
+           
     }
     .media-grid{
             display: grid;
@@ -146,13 +146,7 @@ main{
             grid-template-rows: 1fr 1fr;
             gap: 60px;
             align-items: center;
-
-            font-weight: 500;
-            color:rgb(74, 70, 70);
-            font-size:22px;
-            margin-top: 8px;
-            text-align:center;
-
+            
             .media1 {
                 grid-column: 1;
                 grid-row: 1;
@@ -168,12 +162,29 @@ main{
                 grid-column: 3;
                 grid-row: 1;
             }
+
+            .media4{
+                grid-column: 3;
+                grid-row: 2;
+            }
             div{
-                img{
+                img,iframe{
                     width: 100%;
                     height: auto;
                     display: block;
                     padding: 10px 20px; 
+                    &.rotate{
+                        transition:transform 2s ease-in 4ms;
+                        &:hover{
+                            transform:rotate(-5deg);
+                        }
+                    }
+                }
+                .fa-play{
+                    padding: 0px 200px;
+                }
+                h2,h3,h4,h5{
+                        @extend %text-style;
                 }
             }
            
@@ -185,7 +196,7 @@ main{
             align-items: center;
 
             font-weight: 500;
-            color: rgb(139, 63, 76);
+            color: $color-text;
             font-size:20px;
             .prod1{
                 grid-column: 1;
@@ -200,17 +211,29 @@ main{
                     width: 100%;
                     height: 510px;
                     display: block;
-                    padding: 30px 20px;
+                    padding: 10px 20px;
                     object-fit: cover;
 
                 }
                 #precio{
                     font-weight: 800;
                     color: rgb(57, 26, 31);
-                    font-size:23px;
+                    font-size:18px;
+                   
                 }
                 label{
                      padding-left:20px;
+                }
+                .btn{
+                    background-color: #c62828;
+                    border-color: #c62828;
+                    color: white;
+                    padding: 8px 10px;
+                     &:hover{
+                            background-color: $color-text;
+                            border:#c62828;
+                            
+                        }
                 }
             }
     }
@@ -233,11 +256,19 @@ main{
                 width: 40%;
                 height: auto;
                 display: inline-block;
+                border-radius: 10%;
             }
             nav{
                 a{
-                    color:rgb(201, 98, 98) ;
+                    color: $color-text ;
                     text-decoration: none;
+                    background-color: whitesmoke;
+                    border-color: $color-text;
+                    &:hover{
+                        background-color: $color-text; 
+                        border-color: $color-text;     
+                        color: white;  
+                    }
                 }
             }
     }
@@ -260,11 +291,25 @@ main{
                     }
                     
                     td{
+                        padding: 8px;
                         a{
-                            color: rgb(26, 24, 24);
-                            &:visited{
-                                color:rgb(201, 98, 98);
+                            &.btn {
+                                background-color: $color-text;
+                                border: 2px solid $color-text; 
+                                color: rgb(26, 24, 24);
+                           
+
+                            &:hover {
+                                background-color: $color-text; 
+                                border-color: $color-text;
+                                color: whitesmoke;
                             }
+                           
+                            &:visited{
+                                color: $color-text;
+                                background-color: whitesmoke;
+                            }
+                        }
                         }
                     }
 
@@ -280,8 +325,7 @@ footer{
             height: 65vh;
             margin: 31px auto;
             align-content: center;
-            
-            
+                
             font-weight: 500;
             color:rgb(74, 70, 70);
             font-size:22px;
@@ -303,6 +347,18 @@ footer{
                     @include flexbox(column, space-around, flex-end, nowrap);
                     margin-top:100px;
                     padding: 60px;
+                    
+                    .boton-submit{
+                        background-color: #c62828;
+                        border-color: #c62828;
+
+                        &:hover{
+                            color:white;
+                            background-color: $color-text;
+                            border: solid #c62828;
+                            
+                        }
+                    }
             }
     }
 
@@ -313,6 +369,15 @@ footer{
             padding: 10px;
             width: 30%;
             @include flexbox(row, space-evenly, center, nowrap); 
+            li{
+                a{
+                    .fa-brands{
+                        &:hover{
+                            filter:drop-shadow(0 4px 10px rgba(188, 15, 107, 0.9));
+                        }
+                    }
+                }
+            }
         }
         .fa-copyright{
             margin: 10px;
@@ -320,7 +385,7 @@ footer{
     }
 }
 
-/* RESPONSIVE (se adapta a dispositivos moviles con enfoque desktop first) */
+/* --------RESPONSIVE (se adapta a dispositivos moviles con enfoque desktop first) */
 @media screen and (max-width: 768px) {
 
     header nav.desktop{
@@ -329,8 +394,6 @@ footer{
 
     header nav.mobile{
         display: block;
-        text-align: center;
-        margin: 10px;
     }
 
     main{
@@ -349,13 +412,18 @@ footer{
         }
 
         .album-grid{
-            gap: 10px;
+            gap: 5px;
         }
         .media-grid{
             @include flexbox(column, center, stretch, nowrap);
         }
         .grid-tienda{
             @include flexbox(column, center, flex-start, nowrap);
+            div{
+                img{
+                    height:auto;
+                }
+            }
         }
         
         .gira-promo{
@@ -373,6 +441,10 @@ footer{
                 font-size: 15px;
                 td {
                     padding: 10px 5px;
+                    a.btn {
+                        padding: 0 6px; 
+                        font-size: 12px;   
+                    }
                 }
             }
 
@@ -384,7 +456,6 @@ footer{
             @include flexbox(column, center, center, nowrap);
             font-weight: 400;
             font-size:15px;
-        
 
             .tour-suscribe{
                 align-items: center;

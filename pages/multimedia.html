@@ -13,45 +13,56 @@
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <header>
-        <div><a href="../index.html"><img src="../assets/img/Paramore-Logo.png" alt="paramore logo"></a></div>
-        
-        <nav class="desktop">
-            <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="./musica.html">MÚSICA</a></li>
-                <li><a href="./multimedia.html">MULTIMEDIA</a></li>
-                <li><a href="./tienda.html">TIENDA</a></li>
-                <li><a href="./gira.html">GIRA</a></li>
-            </ul>
-        </nav>  
-        <nav class="mobile">
-            <i class="fa-solid fa-bars"></i>
-        </nav>               
+    <header> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-custom shadow-sm w-100">
+            <div class="container-fluid">
+                <a aria-label="Ir al inicio" class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="../assets/img/Paramore-Logo.png" alt="Logo banda paramore" height="48">
+                </a>
+
+                <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuHeader" aria-controls="menuHeader" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="navbar-collapse collapse" id="menuHeader" >
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./musica.html">MÚSICA</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./multimedia.html">MULTIMEDIA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./tienda.html">TIENDA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./gira.html">GIRA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> 
     </header>
+    
     <main>
         <h1>Multimedia</h1>
         <section class="media-grid"> 
             <div class="media1">
-                <a href="https://www.youtube.com/watch?v=xIYJ7VaSxYY" target="_blank" class="video-thumbnail">
-                    <img src="https://img.youtube.com/vi/xIYJ7VaSxYY/hqdefault.jpg" alt="Portada del video">
-                    <div><i class="fa-solid fa-play"></i></div>
-                </a>
-                <h2>Paramore – This Is Why</h2>
+                <iframe src="https://www.youtube.com/embed/ei8hPkyJ0bU?si=A2fCwPtk2KtAHiZG" title="video oficial crushcrushcrush" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h2>Paramore – crushcrushcrush</h2>
             </div>
 
             <div class="media2">
                 <a href="https://www.instagram.com/reel/C22WO_sLASu/" target="_blank" class="video-thumbnail">
-                    <img src="../assets/img/portada-del-reel.png" alt="Portada del reel">
+                    <img class="rotate" src="../assets/img/portada-del-reel.png" alt="Portada del reel">
                     <div><i class="fa-solid fa-play"></i></div>
                 </a>
                 <h3>En el estudio</h3>
             </div>
 
             <div class="media3">
-                <img src="../assets/img/austincitylimits2022.jpg" alt="foto de recital">
+                <img class="rotate" src="../assets/img/austincitylimits2022.jpg" alt="foto de recital">
                 <h4>ACL 2022</h4>
             </div>
+
+            <div class="media4">
+                <iframe  src="https://www.youtube.com/embed/5OrHcukLLyY?si=Q2oGdCD75yP4mzP3" title="video entrevista con zane" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h5>Entrevista con Zane</h5>
+            </div>
+
         </section>
     </main>
 

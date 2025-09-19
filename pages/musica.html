@@ -14,21 +14,29 @@
 </head>
 <body>
     <header>
-        <div><a href="../index.html"><img src="../assets/img/Paramore-Logo.png" alt="paramore logo"></a></div>
-        
-        <nav class="desktop">
-            <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="./musica.html">MÚSICA</a></li>
-                <li><a href="./multimedia.html">MULTIMEDIA</a></li>
-                <li><a href="./tienda.html">TIENDA</a></li>
-                <li><a href="./gira.html">GIRA</a></li>
-            </ul>
-        </nav>   
-        <nav class="mobile">
+      <nav class="navbar navbar-expand-lg navbar-light bg-custom shadow-sm w-100">
+        <div class="container-fluid">
+          <a aria-label="Ir al inicio" class="navbar-brand d-flex align-items-center" href="#">
+            <img src="../assets/img/Paramore-Logo.png" alt="Logo banda paramore" height="48">
+          </a>
+
+          <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuHeader" aria-controls="menuHeader" aria-expanded="false" aria-label="Abrir menú de navegación">
             <i class="fa-solid fa-bars"></i>
-        </nav>              
+          </button>
+
+          <div class="navbar-collapse collapse" id="menuHeader">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">INICIO</a></li>
+              <li class="nav-item"><a class="nav-link active" href="./musica.html">MÚSICA</a></li>
+              <li class="nav-item"><a class="nav-link" href="./multimedia.html">MULTIMEDIA</a></li>
+              <li class="nav-item"><a class="nav-link" href="./tienda.html">TIENDA</a></li>
+              <li class="nav-item"><a class="nav-link" href="./gira.html">GIRA</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
     </header>
+    
     <main>
         <h1>Música</h1>
         <section class="album-grid">
@@ -38,6 +46,8 @@
             <h3>After Laughter</h3></div>
             <div class="album3"><img src="../assets/img/self-titled.jfif" alt="Trío de Paramore con iluminación en verde y rojo sobre fondo oscuro, portada del álbum 'Paramore'">
             <h4>PARAMORE - Self Titled</h4></div>
+            
+       
         </section>
     </main>
 
