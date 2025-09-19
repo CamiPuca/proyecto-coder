@@ -40,7 +40,7 @@ header .bg-custom div li > a {
   font-size: 20px;
 }
 
-.fa-solid {
+li > a, .fa-solid {
   color: rgb(201, 98, 98);
   text-decoration: none;
   font-size: 20px;
