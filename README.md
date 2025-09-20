@@ -6,7 +6,7 @@ Este es un proyecto web dedicado a la banda **Paramore**, desarrollado como prá
 
 ## 📄 Descripción
 
-Este sitio fue diseñado para fans de Paramore, con el objetivo de mostrar información clave sobre la banda, como discografía, presentaciones en vivo, material multimedia y productos oficiales. También incluye un formulario de suscripción para recibir novedades sobre futuras giras.
+Este sitio fue diseñado para fans de Paramore, con el objetivo de mostrar información clave sobre la banda, como discografía, presentaciones en vivo, material multimedia y productos oficiales. También incluye un formulario de suscripción para recibir novedades sobre la banda.
 --------
 
 ## 🧰 Tecnologías utilizadas
@@ -22,5 +22,5 @@ Este sitio fue diseñado para fans de Paramore, con el objetivo de mostrar infor
 
 ✅ Proyecto completo – primera versión funcional.  
 🔧 Próximas mejoras:
-- Implementar un carrito de compras con JS
-- Validación y conexión real del formulario de suscripción
+- Implementar un carrito de compras con JS.
+- Validación y conexión real del formulario de suscripción.

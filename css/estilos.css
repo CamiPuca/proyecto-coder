@@ -101,6 +101,10 @@ main .album-grid div img {
   border-radius: 10%;
   padding: 10px 20px;
 }
+main .album-grid div p {
+  text-align: justify;
+  font-size: 16px;
+}
 main .media-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -331,7 +335,15 @@ footer div .fa-copyright {
     height: 31vh;
   }
   main .album-grid {
-    gap: 5px;
+    gap: 4px;
+  }
+  main .album-grid div img {
+    border-radius: 22%;
+  }
+  main .album-grid div p {
+    font-size: 0.76rem;
+    max-height: none;
+    overflow: visible;
   }
   main .media-grid {
     display: flex;

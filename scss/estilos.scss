@@ -55,7 +55,7 @@ header{
         background-color:  rgb(237, 230, 230);
         div{    
             li>a{ // todos los enlaces que se encuentren dentro de una etiqueta de lista tendran ciertas caracteristicas
-               // color:$color-text;
+               
                color:#c62828;
                 text-decoration:none;
                 font-size: 20px;
@@ -68,7 +68,6 @@ header{
 
 li>a, .fa-solid { 
 
-    //color:$color-text;
     color:#c62828;
     text-decoration:none;
     font-size: 20px;
@@ -138,6 +137,10 @@ main{
                 }
                 h2,h3,h4{
                     @extend %text-style;
+                }
+                p{
+                    text-align: justify;
+                    font-size:16px;
                 }
             }
            
@@ -270,12 +273,10 @@ main{
             }
             nav{
                 a{
-                    //color: $color-text ;
-                    
                     text-decoration: none;
                     background-color: whitesmoke;
-                    border:solid #c62828;// $color-text
-                    color:#c62828;;
+                    border:solid #c62828;
+                    color:#c62828;
                     &:hover{
                         background-color: $color-text; 
                         border-color: $color-text;     
@@ -416,7 +417,18 @@ footer{
         }
 
         .album-grid{
-            gap: 5px;
+            gap: 4px;
+            div{ 
+                img{
+                    border-radius: 22%;
+                }
+                p{
+                    font-size: 0.76rem;
+                    max-height: none; 
+                    overflow: visible;
+                    
+                }
+            }
         }
         .media-grid{
             @include flexbox(column, center, stretch, nowrap);
