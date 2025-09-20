@@ -103,7 +103,7 @@ main .album-grid div img {
 }
 main .album-grid div p {
   text-align: justify;
-  font-size: 16px;
+  font-size: 20px;
 }
 main .media-grid {
   display: grid;
@@ -346,7 +346,7 @@ footer div .fa-copyright {
     border-radius: 22%;
   }
   main .album-grid div p {
-    font-size: 0.76rem;
+    font-size: 0.9rem;
     max-height: none;
     overflow: visible;
   }
