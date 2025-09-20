@@ -417,6 +417,7 @@ footer{
         }
 
         .album-grid{
+            @include flexbox(column, center, center, nowrap);
             gap: 4px;
             div{ 
                 img{

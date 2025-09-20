@@ -335,6 +335,11 @@ footer div .fa-copyright {
     height: 31vh;
   }
   main .album-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     gap: 4px;
   }
   main .album-grid div img {
