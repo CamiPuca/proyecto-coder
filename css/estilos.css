@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-main .media-grid div h2, main .media-grid div h3, main .media-grid div h4, main .media-grid div h5, main .album-grid div h2, main .album-grid div h3, main .album-grid div h4 {
+footer .tour-form, main section table, main .grid-tienda, main .media-grid div h2, main .media-grid div h3, main .media-grid div h4, main .media-grid div h5, main .media-grid div h6, main .album-grid div h2, main .album-grid div h3, main .album-grid div h4 {
   font-weight: 500;
-  color: rgb(74, 70, 70);
+  color: rgb(27, 25, 25);
   font-size: 22px;
   margin-top: 8px;
   text-align: center;
@@ -35,13 +35,13 @@ header .bg-custom {
   background-color: rgb(237, 230, 230);
 }
 header .bg-custom div li > a {
-  color: rgb(201, 98, 98);
+  color: #c62828;
   text-decoration: none;
   font-size: 20px;
 }
 
 li > a, .fa-solid {
-  color: rgb(201, 98, 98);
+  color: #c62828;
   text-decoration: none;
   font-size: 20px;
 }
@@ -59,7 +59,7 @@ main h1.h1-inicio {
 }
 main .storie-text {
   font-weight: 500;
-  color: rgb(112, 104, 104);
+  color: rgb(27, 25, 25);
   font-size: 22px;
   text-align: left;
 }
@@ -125,6 +125,11 @@ main .media-grid .media4 {
   grid-column: 3;
   grid-row: 2;
 }
+main .media-grid .media5 {
+  grid-column: 1;
+  grid-row: 2;
+  margin-bottom: 60px;
+}
 main .media-grid div img, main .media-grid div iframe {
   width: 100%;
   height: auto;
@@ -145,9 +150,7 @@ main .grid-tienda {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   align-items: center;
-  font-weight: 500;
-  color: rgb(201, 98, 98);
-  font-size: 20px;
+  padding-bottom: 90px;
 }
 main .grid-tienda .prod1 {
   grid-column: 1;
@@ -167,7 +170,7 @@ main .grid-tienda div img {
 main .grid-tienda div #precio {
   font-weight: 800;
   color: rgb(57, 26, 31);
-  font-size: 18px;
+  font-size: 20px;
 }
 main .grid-tienda div label {
   padding-left: 20px;
@@ -211,10 +214,10 @@ main .gira-promo img {
   border-radius: 10%;
 }
 main .gira-promo nav a {
-  color: rgb(201, 98, 98);
   text-decoration: none;
   background-color: whitesmoke;
-  border-color: rgb(201, 98, 98);
+  border: solid #c62828;
+  color: #c62828;
 }
 main .gira-promo nav a:hover {
   background-color: rgb(201, 98, 98);
@@ -225,11 +228,6 @@ main section table {
   width: 100%;
   border-collapse: collapse;
   margin: 30px 0;
-  font-weight: 500;
-  color: rgb(74, 70, 70);
-  font-size: 22px;
-  margin-top: 8px;
-  text-align: center;
 }
 main section table tr .titulo-seccion {
   text-align: left;
@@ -242,7 +240,7 @@ main section table tr td {
 main section table tr td a.btn {
   background-color: rgb(201, 98, 98);
   border: 2px solid rgb(201, 98, 98);
-  color: rgb(26, 24, 24);
+  color: rgb(27, 25, 25);
 }
 main section table tr td a.btn:hover {
   background-color: rgb(201, 98, 98);
@@ -264,11 +262,6 @@ footer .tour-form {
   height: 65vh;
   margin: 31px auto;
   align-content: center;
-  font-weight: 500;
-  color: rgb(74, 70, 70);
-  font-size: 22px;
-  margin-top: 8px;
-  text-align: center;
 }
 footer .tour-form .tour-subtitulo {
   display: flex;

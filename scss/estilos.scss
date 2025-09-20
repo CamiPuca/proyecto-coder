@@ -15,7 +15,7 @@ $color-text: rgb(201, 98, 98);
 
 %text-style{
         font-weight: 500;
-        color:rgb(74, 70, 70);
+        color:rgb(27, 25, 25);
         font-size:22px;
         margin-top: 8px;
         text-align:center;
@@ -55,7 +55,8 @@ header{
         background-color:  rgb(237, 230, 230);
         div{    
             li>a{ // todos los enlaces que se encuentren dentro de una etiqueta de lista tendran ciertas caracteristicas
-                color:$color-text;
+               // color:$color-text;
+               color:#c62828;
                 text-decoration:none;
                 font-size: 20px;
             }
@@ -67,7 +68,8 @@ header{
 
 li>a, .fa-solid { 
 
-    color:$color-text;
+    //color:$color-text;
+    color:#c62828;
     text-decoration:none;
     font-size: 20px;
 
@@ -88,7 +90,7 @@ main{
     }
     .storie-text{
             font-weight: 500;
-            color:rgb(112, 104, 104);
+            color:rgb(27, 25, 25);
             font-size:22px;
             text-align: left;
             .slide, .carousel-inner{
@@ -167,6 +169,13 @@ main{
                 grid-column: 3;
                 grid-row: 2;
             }
+
+            .media5{
+                grid-column: 1;
+                grid-row: 2;
+                margin-bottom: 60px;
+            }
+
             div{
                 img,iframe{
                     width: 100%;
@@ -183,7 +192,7 @@ main{
                 .fa-play{
                     padding: 0px 200px;
                 }
-                h2,h3,h4,h5{
+                h2,h3,h4,h5,h6{
                         @extend %text-style;
                 }
             }
@@ -195,9 +204,10 @@ main{
             grid-template-rows: 1fr;
             align-items: center;
 
-            font-weight: 500;
-            color: $color-text;
-            font-size:20px;
+            
+            @extend %text-style;
+            padding-bottom: 90px;
+           
             .prod1{
                 grid-column: 1;
                 grid-row: 1;
@@ -218,7 +228,7 @@ main{
                 #precio{
                     font-weight: 800;
                     color: rgb(57, 26, 31);
-                    font-size:18px;
+                    font-size:20px;
                    
                 }
                 label{
@@ -260,10 +270,12 @@ main{
             }
             nav{
                 a{
-                    color: $color-text ;
+                    //color: $color-text ;
+                    
                     text-decoration: none;
                     background-color: whitesmoke;
-                    border-color: $color-text;
+                    border:solid #c62828;// $color-text
+                    color:#c62828;;
                     &:hover{
                         background-color: $color-text; 
                         border-color: $color-text;     
@@ -278,11 +290,7 @@ main{
                 border-collapse: collapse;
                 margin: 30px 0;
 
-                font-weight: 500;
-                color:rgb(74, 70, 70);
-                font-size:22px;
-                margin-top: 8px;
-                text-align:center;
+                @extend %text-style;
                 tr{
                     .titulo-seccion{
                         text-align:left;
@@ -296,7 +304,7 @@ main{
                             &.btn {
                                 background-color: $color-text;
                                 border: 2px solid $color-text; 
-                                color: rgb(26, 24, 24);
+                                color: rgb(27, 25, 25);
                            
 
                             &:hover {
@@ -325,12 +333,8 @@ footer{
             height: 65vh;
             margin: 31px auto;
             align-content: center;
-                
-            font-weight: 500;
-            color:rgb(74, 70, 70);
-            font-size:22px;
-            margin-top: 8px;
-            text-align:center;
+             
+            @extend %text-style;
 
             .tour-subtitulo{
                     @include flexbox(column, space-evenly, flex-start, nowrap);
